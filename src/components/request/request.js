@@ -15,12 +15,9 @@ export default function request() {
                         <h2>ID solicitud</h2>
                         <h2>Fecha</h2>
                         <h2>Resumen</h2>
-                    </div>
+                    </div> 
                     <RequestContent />
-                    <RequestContent />
-                    <RequestContent />
-                    <RequestContent />
-                    <RequestContent />
+                          
                 </div>
                 <RequestCourse/>
                 

@@ -1,30 +1,45 @@
 import React from 'react'
 
 export default function summary() {
+    const data = [
+        {
+            number: 6,
+            estate: 'Pendientes',
+            id: 'slopes'
+        },
+        {
+            number: 3,
+            estate: 'Activas',
+            id: 'active'
+        },
+        {
+            number: 0,
+            estate: 'Cerradas',
+            id: 'closed'
+        },
+        {
+            number: 50000,
+            estate: 'valor servicios',
+            id: 'service'
+        }
+    ]
     return (
         <div className="container">
             <div className="resume">
                 <h1>Solicitudes</h1>
                 <h3>Resumen del mes</h3>
-                <div className="resume__content-card">
-                    <div className="card-resume" id="slopes">
+            </div>
+
+            {data.map((data) =>
+                <div className="content-card">
+
+                    <div className="card-resume" id={data.id}>
                         <h2>6</h2>
                         <p>solicitudes Pendientes</p>
                     </div>
-                    <div className="card-resume" id="active">
-                        <h2>0</h2>
-                        <p>solicitudes Activas</p>
-                    </div>
-                    <div className="card-resume" id="closed">
-                        <h2>0</h2>
-                        <p>solicitudes Cerradas</p>
-                    </div>
-                    <div className="card-resume" id="service">
-                        <h2>$0</h2>
-                        <p>Valor Servicios</p>
-                    </div>
+
                 </div>
-            </div>
+            )}
         </div>
     )
 }
